@@ -1,10 +1,4 @@
-:root {
-    font-size: 62.5%;
-
-    --primary-color: #00856F;
-    --headline: #212529;
-    --paragraph: #495057;
-}
+/* --------> Global <-------- */
 
 * {
     margin: 0;
@@ -13,52 +7,244 @@
     font-family: 'DM Sans', sans-serif;
 }
 
+:root {
+    font-size: 62.5%;
+
+    --primary-color: #00856F;
+    --headline: #212529;
+    --paragraph: #495057;
+
+    --brand-beige: #FFFAF1;
+    --brand-light: #DCE9E2;
+
+    --nav-height: 7.2rem
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     text-align: center;
+}
+
+.wrapper {
+    width: 37.5rem;
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --------> NAVEGATION <-------- */
+
+nav {
+    display: flex;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.scroll {
+    background: var(--primary-color);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+nav.scroll svg:nth-child(1) path {
+    fill: #fff;
+}
+
+nav.scroll button path {
+    stroke: #fff;
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* --------> MENU EXPANDED <-------- */
+
+
+body.menu-expanded {
+    overflow: hidden;
+}
+
+body.menu-expanded> :not(nav) {
+    display: none;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.menu-expanded .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+    width: 100vw;
+    height: 100vh;
+    padding-top: var(--nav-height);
+}
+
+body.menu-expanded nav {
+    position: relative;
+}
+
+.menu ul:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    margin-top: 6rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu .button {
+    background: #fff;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-block;
+    padding: 16px 32px;
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+    position: relative;
+    z-index: 100;
+}
+
+body.menu-expanded .logo path {
+    fill: #fff;
+}
+
+body.menu-expanded button path {
+    stroke: #fff;
+}
+
+/* --------> HEADER <-------- */
+
+header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(105rem + var(--nav-height));
     background: #DCE9E2;
+    z-index: -1;
 }
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 37.5rem;
-    margin: 4.1rem auto;
+    margin-top: calc(2rem + var(--nav-height));
 }
 
-h4 {
+header h4 {
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     color: var(--primary-color);
 }
 
-h1 {
+header h1 {
     margin: 1.6rem 0 2.4rem;
     font-size: 3.4rem;
     font-weight: 700;
     color: var(--headline);
 }
 
-p {
+header p {
     font-size: 1.8rem;
     font-weight: 400;
     color: var(--paragraph);
 }
 
-button {
+header button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 263px;
-    height: 52px;
+    width: 26.3rem;
+    height: 5.2rem;
     margin: 3.2rem 0 6rem;
-    gap: 15px;
+    gap: 1.5rem;
     font-size: 1.4rem;
     font-weight: 700;
     color: #FFFFFF;
     text-transform: uppercase;
     background: var(--primary-color);
     border: none;
-    border-radius: 40px;
+    border-radius: 4rem;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 32.7rem;
+    height: 47rem;
+    background-color: var(--brand-beige);
+    border: 1px solid var(--brand-light);
+    border-radius: 0.6rem;
+}
+
+.stats h3 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 6.2rem;
+    color: var(--headline);
+}
+
+.stats p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: var(--primary-color);
 }
