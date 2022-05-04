@@ -37,7 +37,7 @@ body {
 }
 
 .wrapper {
-    width: 35.5rem;
+    width: 37.5rem;
     margin-inline: auto;
     padding-inline: 2.4rem;
 }
@@ -48,13 +48,14 @@ ul {
 
 img {
     max-width: 100%;
+    border-radius: 1rem;
 }
 
 section {
     padding-block: 10rem;
 }
 
-section header h4 {
+header h4 {
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 150%;
@@ -75,6 +76,32 @@ section header h1 {
     color: var(--headline);
     line-height: 130%;
     margin-bottom: 2.4rem;
+}
+
+section .content p {
+    font-weight: 400;
+    font-size: 1.6rem;  
+    line-height: 150%;  
+  
+    color: var(--paragraph);
+}
+
+section .content button,
+#home button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26.3rem;
+    height: 5.2rem;
+    margin: 3.2rem auto 6rem;
+    gap: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 4rem;
 }
 
 /* --------> NAVEGATION <-------- */
@@ -120,7 +147,7 @@ body.menu-expanded {
 }
 
 body.menu-expanded> :not(nav) {
-    display: none;
+    visibility: hidden;
 }
 
 .menu,
@@ -175,7 +202,7 @@ body.menu-expanded nav {
     text-decoration: none;
     color: var(--primary-color);
     display: inline-block;
-    padding: 16px 32px;
+    padding: 1.6rem 3.2rem;
     margin-top: 4.8rem;
     margin-bottom: 8rem;
 }
@@ -210,21 +237,13 @@ body.menu-expanded button path {
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(105rem + var(--nav-height));
+    height: calc(108rem + var(--nav-height));
     background: #DCE9E2;
     z-index: -1;
 }
 
 #home {
     padding-top: calc(4.1rem + var(--nav-height));
-}
-
-header h4 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: var(--primary-color);
-    text-transform: uppercase;
 }
 
 #home h1 {
@@ -238,23 +257,6 @@ header h4 {
     font-size: 1.8rem;
     font-weight: 400;
     color: var(--paragraph);
-}
-
-#home button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 26.3rem;
-    height: 5.2rem;
-    margin: 3.2rem auto 6rem;
-    gap: 1.5rem;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    background: var(--primary-color);
-    border: none;
-    border-radius: 4rem;
 }
 
 #home img {
@@ -319,8 +321,62 @@ header h4 {
     color: var(--headline);
 }
 
-#services .cards .card p {
+/* --------> SECTION ABOUT <-------- */
+
+#about {
+    background-color: var(--brand-beige);
+}
+
+#about header {
+    text-align: left;
+}
+
+#about .content p {
+    text-align: justify;
+    margin-block: 2.4rem 6rem;
+}
+
+/* --------> SECTION CONTACT <-------- */
+
+#contact header {
+    text-align: left;
+    padding-right: 2rem;
+}
+
+#contact .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-block: 3.2rem;
+}
+
+#contact .info {
+    display: flex;
+    gap: 0.8rem;
+}
+
+#contact .content button {
+    margin: 3.2rem 0 6rem;
+}
+
+/* --------> FOOTER <-------- */
+
+footer {
+    padding: 6rem 2.5rem;
+    text-align: left;
+    background-color: var(--primary-color);
+}
+
+footer .license {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-block: 2.4rem 3.2rem;
     font-size: 1.6rem;
     font-weight: 400;
-    color: var(--paragraph);
+    color: var(--brand-beige);
+}
+
+footer .social-links {
+    justify-content: start;
 }
