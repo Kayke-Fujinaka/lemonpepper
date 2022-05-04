@@ -16,8 +16,13 @@
 
     --brand-beige: #FFFAF1;
     --brand-light: #DCE9E2;
+    --brand-green: #F7F9F9;
 
     --nav-height: 7.2rem
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -27,16 +32,49 @@ html, body {
 
 body {
     text-align: center;
+    overflow: overlay;
+    background-color: var(--brand-green);
 }
 
 .wrapper {
-    width: 37.5rem;
+    width: 35.5rem;
     margin-inline: auto;
     padding-inline: 2.4rem;
 }
 
 ul {
     list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    padding-block: 10rem;
+}
+
+section header h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.08rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+}
+
+section header h2 {
+    font-size: 3rem;
+    line-height: 3.9rem;
+    color: var(--headline);
+}
+
+section header h1 {
+    font-size: 3.4rem;
+    color: var(--headline);
+    line-height: 130%;
+    margin-bottom: 2.4rem;
 }
 
 /* --------> NAVEGATION <-------- */
@@ -46,8 +84,8 @@ nav {
     height: var(--nav-height);
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 10;
 }
 
 nav .wrapper {
@@ -58,9 +96,6 @@ nav .wrapper {
 
 nav.scroll {
     background: var(--primary-color);
-    width: 100vw;
-    position: fixed;
-    top: 0;
 }
 
 nav.scroll svg:nth-child(1) path {
@@ -168,7 +203,7 @@ body.menu-expanded button path {
 
 /* --------> HEADER <-------- */
 
-header::before {
+#home::before {
     content: "";
     display: block;
     position: absolute;
@@ -180,11 +215,8 @@ header::before {
     z-index: -1;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: calc(2rem + var(--nav-height));
+#home {
+    padding-top: calc(4.1rem + var(--nav-height));
 }
 
 header h4 {
@@ -192,28 +224,29 @@ header h4 {
     font-weight: 700;
     letter-spacing: 0.08em;
     color: var(--primary-color);
+    text-transform: uppercase;
 }
 
-header h1 {
+#home h1 {
     margin: 1.6rem 0 2.4rem;
     font-size: 3.4rem;
     font-weight: 700;
     color: var(--headline);
 }
 
-header p {
+#home p {
     font-size: 1.8rem;
     font-weight: 400;
     color: var(--paragraph);
 }
 
-header button {
+#home button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 26.3rem;
     height: 5.2rem;
-    margin: 3.2rem 0 6rem;
+    margin: 3.2rem auto 6rem;
     gap: 1.5rem;
     font-size: 1.4rem;
     font-weight: 700;
@@ -224,6 +257,13 @@ header button {
     border-radius: 4rem;
 }
 
+#home img {
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+    object-position: 0 2rem;
+}
+
 .stats {
     display: flex;
     flex-direction: column;
@@ -231,7 +271,7 @@ header button {
     width: 32.7rem;
     height: 47rem;
     background-color: var(--brand-beige);
-    border: 1px solid var(--brand-light);
+    border: 0.1rem solid var(--brand-light);
     border-radius: 0.6rem;
 }
 
@@ -243,8 +283,44 @@ header button {
 }
 
 .stats p {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 2.4rem;
     color: var(--primary-color);
+}
+
+/* --------> SECTION SERVICES <-------- */
+
+#services header h2 {
+    margin-bottom: 6rem;
+}
+
+#services .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#services .card {
+    display: flex;
+    flex-direction: column;
+    width: 32.7rem;
+    gap: 1.6rem;
+    padding: 2.4rem;
+    text-align: start;
+    background: #fff;
+    border: 0.1rem solid #DCE9E2;
+    border-radius: 0.6rem;
+}
+
+#services .cards .card h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--headline);
+}
+
+#services .cards .card p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--paragraph);
 }
