@@ -18,6 +18,9 @@
     --brand-light: #DCE9E2;
     --brand-green: #F7F9F9;
 
+    --brand-green-hover: #00453A;
+
+
     --nav-height: 7.2rem
 }
 
@@ -104,6 +107,17 @@ section .content button,
     border-radius: 4rem;
 }
 
+section .content button:hover,
+#home button:hover {
+    cursor: pointer;
+    background-color: var(--brand-green-hover);
+}
+
+section .content button:active,
+#home button:active {
+    filter: brightness(0.9);
+}
+
 /* --------> NAVEGATION <-------- */
 
 nav {
@@ -125,7 +139,7 @@ nav.scroll {
     background: var(--primary-color);
 }
 
-nav.scroll svg:nth-child(1) path {
+nav.scroll .logo path {
     fill: #fff;
 }
 
@@ -141,92 +155,102 @@ nav button {
 
 /* --------> MENU EXPANDED <-------- */
 
-
 body.menu-expanded {
     overflow: hidden;
-}
-
-body.menu-expanded> :not(nav) {
+  }
+  
+  body.menu-expanded > :not(nav) {
     visibility: hidden;
-}
-
-.menu,
-.close-menu,
-body.menu-expanded .open-menu {
+  }
+  
+  .menu,
+  .close-menu,
+  body.menu-expanded .open-menu {
     opacity: 0;
     visibility: hidden;
-}
-
-body.menu-expanded .menu,
-body.menu-expanded .close-menu {
+  }
+  
+  body.menu-expanded .menu,
+  body.menu-expanded .close-menu {
     opacity: 1;
     visibility: visible;
-}
-
-body.menu-expanded .menu {
+  }
+  
+  .menu {
+    transform: translateY(100%);
+  }
+  
+  body.menu-expanded .menu {
     position: fixed;
     top: 0;
     left: 0;
     background: var(--primary-color);
+  
     width: 100vw;
     height: 100vh;
+  
     padding-top: var(--nav-height);
-}
-
-body.menu-expanded nav {
-    position: relative;
-}
-
-.menu ul:nth-child(1) {
+  
+    transition: transform 300ms;
+    transform: translateY(0);
+    
+  }
+  
+  .menu ul:nth-child(1) {
     display: flex;
     flex-direction: column;
     gap: 4.8rem;
+  
     margin-top: 6rem;
+  
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.1rem;
-}
-
-.menu ul li a {
-    color: #fff;
+  }
+  
+  .menu ul li a {
+    color: #FFFFFF;
     text-decoration: none;
-}
-
-.menu .button {
-    background: #fff;
+  }
+  
+  .menu .button {
+    background: #FFFFFF;
     border-radius: 4rem;
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 2.3rem;
     text-transform: uppercase;
     text-decoration: none;
+  
     color: var(--primary-color);
+  
     display: inline-block;
-    padding: 1.6rem 3.2rem;
+    padding: 16px 32px;
+  
     margin-top: 4.8rem;
     margin-bottom: 8rem;
-}
+  }
+  
+  body.menu-expanded .logo,
+  body.menu-expanded button {
+    position: relative;
+    z-index: 100;
+  }
+  
+  body.menu-expanded .logo path {
+    fill: #FFFFFF;
+  }
+  
+  body.menu-expanded button path {
+    stroke: #FFFFFF;
+  }
 
-.social-links {
+  .social-links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3.2rem;
-}
-
-body.menu-expanded .logo,
-body.menu-expanded button {
-    position: relative;
-    z-index: 100;
-}
-
-body.menu-expanded .logo path {
-    fill: #fff;
-}
-
-body.menu-expanded button path {
-    stroke: #fff;
-}
+  }
 
 /* --------> HEADER <-------- */
 
