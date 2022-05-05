@@ -5,21 +5,23 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
 }
 
 :root {
     font-size: 62.5%;
 
-    --primary-color: #00856F;
-    --headline: #212529;
-    --paragraph: #495057;
+    --hue: 200;
 
-    --brand-beige: #FFFAF1;
-    --brand-light: #DCE9E2;
-    --brand-green: #F7F9F9;
+    --primary-color: hsl(var(--hue), 100%, 26%);
+    --headline: hsl(210, 11%, 15%);
+    --paragraph: hsl(210, 9%, 31%);
 
-    --brand-green-hover: #00453A;
+    --brand-beige: hsl(calc(var(--hue) - 10), 100%, 97%);
+    --brand-light: hsl(calc(var(--hue) - 22), 23%, 89%);
+    --brand-green: hsl(180, 63%, 98%);
 
+    --brand-green-hover: hsl(var(--hue), 100%, 14%);
 
     --nav-height: 7.2rem
 }
@@ -83,14 +85,14 @@ section header h1 {
 
 section .content p {
     font-weight: 400;
-    font-size: 1.6rem;  
-    line-height: 150%;  
-  
+    font-size: 1.6rem;
+    line-height: 150%;
+
     color: var(--paragraph);
 }
 
-section .content button,
-#home button {
+section .content a,
+#home a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,10 +107,11 @@ section .content button,
     background: var(--primary-color);
     border: none;
     border-radius: 4rem;
+    cursor: pointer;
 }
 
-section .content button:hover,
-#home button:hover {
+section .content a:hover,
+#home a:hover {
     cursor: pointer;
     background-color: var(--brand-green-hover);
 }
@@ -116,6 +119,31 @@ section .content button:hover,
 section .content button:active,
 #home button:active {
     filter: brightness(0.9);
+}
+
+/* custom colors */
+
+#services .card circle {
+    fill: var(--brand-light);
+}
+
+#navigation .logo path[fill*='#00856F'],
+#backToTopButton circle {
+    fill: var(--primary-color);
+}
+
+button.open-menu path[stroke*='#00856F'],
+#contact .info path {
+    stroke: var(--primary-color);
+}
+
+body.menu-expanded #navigation .logo path,
+#navigation.scroll .logo path {
+    fill: white;
+}
+
+#navigation.scroll button.open-menu path[stroke*='#00856F'] {
+    stroke: white;
 }
 
 /* --------> NAVEGATION <-------- */
@@ -157,100 +185,111 @@ nav button {
 
 body.menu-expanded {
     overflow: hidden;
-  }
-  
-  body.menu-expanded > :not(nav) {
+}
+
+body.menu-expanded> :not(nav) {
     visibility: hidden;
-  }
-  
-  .menu,
-  .close-menu,
-  body.menu-expanded .open-menu {
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
     opacity: 0;
     visibility: hidden;
-  }
-  
-  body.menu-expanded .menu,
-  body.menu-expanded .close-menu {
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
     opacity: 1;
     visibility: visible;
-  }
-  
-  .menu {
+}
+
+.menu {
     transform: translateY(100%);
-  }
-  
-  body.menu-expanded .menu {
+}
+
+body.menu-expanded .menu {
     position: fixed;
     top: 0;
     left: 0;
     background: var(--primary-color);
-  
+
     width: 100vw;
     height: 100vh;
-  
+
     padding-top: var(--nav-height);
-  
+
     transition: transform 300ms;
     transform: translateY(0);
-    
-  }
-  
-  .menu ul:nth-child(1) {
+
+}
+
+.menu ul:nth-child(1) {
     display: flex;
     flex-direction: column;
     gap: 4.8rem;
-  
+
     margin-top: 6rem;
-  
+
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.1rem;
-  }
-  
-  .menu ul li a {
+}
+
+.menu ul li a {
     color: #FFFFFF;
-    text-decoration: none;
-  }
-  
-  .menu .button {
+}
+
+.menu ul li a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.menu .button {
     background: #FFFFFF;
+    border: 0.2rem solid var(--primary-color);
     border-radius: 4rem;
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 2.3rem;
     text-transform: uppercase;
     text-decoration: none;
-  
+
     color: var(--primary-color);
-  
+
     display: inline-block;
     padding: 16px 32px;
-  
+
     margin-top: 4.8rem;
     margin-bottom: 8rem;
-  }
-  
-  body.menu-expanded .logo,
-  body.menu-expanded button {
+}
+
+.menu .button:hover {
+    background-color: var(--primary-color);
+    border: 0.2rem solid #FFF;
+    color: #FFF;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
     position: relative;
     z-index: 100;
-  }
-  
-  body.menu-expanded .logo path {
-    fill: #FFFFFF;
-  }
-  
-  body.menu-expanded button path {
-    stroke: #FFFFFF;
-  }
+}
 
-  .social-links {
+body.menu-expanded .logo path {
+    fill: #FFFFFF;
+}
+
+body.menu-expanded button path {
+    stroke: #FFFFFF;
+}
+
+.social-links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3.2rem;
-  }
+}
 
 /* --------> HEADER <-------- */
 
@@ -262,7 +301,7 @@ body.menu-expanded {
     left: 0;
     width: 100%;
     height: calc(108rem + var(--nav-height));
-    background: #DCE9E2;
+    background-color: var(--brand-light);
     z-index: -1;
 }
 
@@ -379,7 +418,7 @@ body.menu-expanded {
     gap: 0.8rem;
 }
 
-#contact .content button {
+#contact .content a {
     margin: 3.2rem 0 6rem;
 }
 
@@ -403,4 +442,22 @@ footer .license {
 
 footer .social-links {
     justify-content: start;
+}
+
+/* --------> BACK TO TOP <-------- */
+
+#backToTopButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: 200ms;
+}
+
+#backToTopButton.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
