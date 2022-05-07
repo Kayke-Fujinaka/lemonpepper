@@ -8,7 +8,7 @@
 
 A aplicação foi criada em colaboração com o evento NLW Origin da Rocketseat, a qual as aulas foram orientadas pelo Mayk Brito.
 
-O site se chama "LemonPepper" e ele trata-se de uma Landing Page. Nela possui algumas seções como o Início, Cardápio, Sobre nós e Contato. Foi iniciado com Mobile First e depois foi transformado para Desktop.
+O site se chama "LemonPepper" e ele trata-se de uma Landing Page. Nela possui algumas seções como o Início, Cardápio, Depoimentos, Sobre nós e Contato. Foi iniciado com Mobile First e depois foi transformado para Desktop.
 
 A LemonPepper é uma pizzaria fictícia que simula ter mais de 58 lojas espalhadas por todo Brasil. 
 
@@ -32,6 +32,7 @@ A LemonPepper é uma pizzaria fictícia que simula ter mais de 58 lojas espalhad
 :heavy_check_mark: Colocando para Desktop;\
 :heavy_check_mark: Alterando a cor do site para vermelho;\
 :heavy_check_mark: Arrumando alguns detalhes como emoji, parágrafos, títulos e etc;\
+:heavy_check_mark: Seção de depoimentos;\
 :heavy_check_mark: Finalizado.
 
 ## :rocket: Tecnologias ##

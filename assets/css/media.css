@@ -70,12 +70,11 @@
 
     nav#navigation .menu ul li a {
         color: var(--primary-color);
-        opacity: 0.7;
         font-size: 1.6rem;
     }
 
     nav#navigation .menu ul li a:hover {
-        filter: brightness(0.9);
+        filter: brightness(0.95);
     }
 
     nav#navigation .menu a.button {
@@ -99,8 +98,7 @@
     }
 
     nav#navigation.scroll .menu ul li a {
-        color: var(--brand-light-2);
-        opacity: 0.6;
+        color: #FFFFFF;
     }
 
     nav#navigation.scroll .menu a.button {
@@ -109,7 +107,7 @@
     }
 
     nav#navigation .menu li a {
-        transition: opacity 0.4s;
+        transition: opacity 0.8s;
     }
 
     nav#navigation .menu li a.active,

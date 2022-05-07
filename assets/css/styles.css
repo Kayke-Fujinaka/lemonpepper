@@ -433,6 +433,59 @@ body.menu-expanded .logo span {
     background-color: var(--brand-dark);
 }
 
+/* --------> DEPOIMENTOS <-------- */
+
+#testimonials {
+    background: white;
+}
+
+#testimonials blockquote {
+    padding: 2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 0.25rem;
+    display: block;
+    max-width: 544px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#testimonials blockquote p {
+    position: relative;
+    text-indent: 1.7rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: var(--headline)
+}
+
+#testimonials blockquote p span {
+    font: 700 2.5rem serif;
+    position: absolute;
+    top: -0.5rem;
+    left: -1.6rem;
+    color: var(--primary-color)
+}
+
+#testimonials cite {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+#testimonials cite img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    clip-path: circle();
+    margin-right: 0.5rem;
+}
+
+.swiper-slide {
+    height: auto;
+    padding: 4rem 1rem;
+}
+
 /* --------> SECTION ABOUT <-------- */
 
 #about {
