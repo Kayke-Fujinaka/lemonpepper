@@ -11,17 +11,18 @@
 :root {
     font-size: 62.5%;
 
-    --hue: 200;
+    --hue: 190;
 
     --primary-color: hsl(var(--hue), 100%, 26%);
     --headline: hsl(210, 11%, 15%);
     --paragraph: hsl(210, 9%, 31%);
 
-    --brand-beige: hsl(calc(var(--hue) - 10), 100%, 97%);
+    --brand-beige: hsl(39, 100%, 97%);
     --brand-light: hsl(calc(var(--hue) - 22), 23%, 89%);
+    --brand-light-2: hsl(calc(var(--hue) + 10), 14%, 97%);
     --brand-green: hsl(180, 63%, 98%);
 
-    --brand-green-hover: hsl(var(--hue), 100%, 14%);
+    --brand-dark: hsl(var(--hue), 100%, 14%);
 
     --nav-height: 7.2rem
 }
@@ -42,7 +43,7 @@ body {
 }
 
 .wrapper {
-    width: 37.5rem;
+    width: min(58rem, 100%);
     margin-inline: auto;
     padding-inline: 2.4rem;
 }
@@ -113,7 +114,7 @@ section .content a,
 section .content a:hover,
 #home a:hover {
     cursor: pointer;
-    background-color: var(--brand-green-hover);
+    background-color: var(--brand-dark);
 }
 
 section .content button:active,
@@ -139,11 +140,11 @@ button.open-menu path[stroke*='#00856F'],
 
 body.menu-expanded #navigation .logo path,
 #navigation.scroll .logo path {
-    fill: white;
+    fill: #FFFFFF;
 }
 
 #navigation.scroll button.open-menu path[stroke*='#00856F'] {
-    stroke: white;
+    stroke: #FFFFFF;
 }
 
 /* --------> NAVEGATION <-------- */
@@ -208,6 +209,11 @@ body.menu-expanded .close-menu {
     transform: translateY(100%);
 }
 
+nav .menu,
+nav .close-menu {
+    position: fixed;
+}
+
 body.menu-expanded .menu {
     position: fixed;
     top: 0;
@@ -242,7 +248,6 @@ body.menu-expanded .menu {
 
 .menu ul li a:hover {
     color: #FFFFFF;
-    text-decoration: underline;
 }
 
 .menu .button {
@@ -258,7 +263,7 @@ body.menu-expanded .menu {
     color: var(--primary-color);
 
     display: inline-block;
-    padding: 16px 32px;
+    padding: 1.6rem 3.2rem;
 
     margin-top: 4.8rem;
     margin-bottom: 8rem;
@@ -307,6 +312,7 @@ body.menu-expanded button path {
 
 #home {
     padding-top: calc(4.1rem + var(--nav-height));
+    padding-bottom: 0;
 }
 
 #home h1 {
@@ -329,29 +335,31 @@ body.menu-expanded button path {
     object-position: 0 2rem;
 }
 
-.stats {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 32.7rem;
-    height: 47rem;
+#home .stats {
+    width: 100%;
+    padding-block: 4rem;
+    margin-inline: auto;
     background-color: var(--brand-beige);
     border: 0.1rem solid var(--brand-light);
     border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
 }
 
-.stats h3 {
+#home .stat h3 {
     font-size: 4.8rem;
-    font-weight: 700;
-    line-height: 6.2rem;
     color: var(--headline);
+    line-height: 130%;
+    margin-bottom: 0.4rem;
 }
 
-.stats p {
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 2.4rem;
+#home .stat p {
+    margin: 0;
     color: var(--primary-color);
+    font-size: 1.6rem;
+    line-height: 150%;
 }
 
 /* --------> SECTION SERVICES <-------- */
@@ -369,7 +377,7 @@ body.menu-expanded button path {
 #services .card {
     display: flex;
     flex-direction: column;
-    width: 32.7rem;
+    width: 100%;
     gap: 1.6rem;
     padding: 2.4rem;
     text-align: start;
@@ -401,47 +409,60 @@ body.menu-expanded button path {
 
 /* --------> SECTION CONTACT <-------- */
 
-#contact header {
+#contact {
     text-align: left;
-    padding-right: 2rem;
 }
 
-#contact .infos {
+#contact header {
+    margin-bottom: 3.2rem;
+}
+
+#contact ul {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    margin-block: 3.2rem;
+    margin-bottom: 3.2rem;
 }
 
-#contact .info {
+#contact ul li {
     display: flex;
+    align-items: center;
     gap: 0.8rem;
-}
-
-#contact .content a {
-    margin: 3.2rem 0 6rem;
+    font-size: 1.4rem;
 }
 
 /* --------> FOOTER <-------- */
 
 footer {
-    padding: 6rem 2.5rem;
-    text-align: left;
     background-color: var(--primary-color);
+    padding-block: 6rem;
+    text-align: left;
+    color: #FFFFFF;
 }
 
-footer .license {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    margin-block: 2.4rem 3.2rem;
-    font-size: 1.6rem;
-    font-weight: 400;
+footer .logo {
+    display: inline-block;
+    margin-bottom: 2.4rem;
+}
+
+footer .logo svg {
+    width: 23.6rem;
+    height: 3.1rem;
+}
+
+footer .logo path {
+    fill: #FFFFFF;
+}
+
+footer p {
     color: var(--brand-beige);
+    line-height: 2;
+
+    margin-bottom: 3.2rem;
 }
 
 footer .social-links {
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 /* --------> BACK TO TOP <-------- */

@@ -12,8 +12,7 @@ O site se chama "DoctorCare" e ele trata-se de uma Landing Page. Nela possui alg
 
 ## :dart: Etapas ##
 
-Mobile First
-
+:heavy_check_mark: Mobile First ;\
 :heavy_check_mark: Estruturação e Estilização do Container Home;\
 :heavy_check_mark: Finalizando o Container Home;\
 :heavy_check_mark: Menu de Navegação do Mobile junto com JavaScript;\
@@ -27,6 +26,11 @@ Mobile First
 :heavy_check_mark: Padronizar botões;\
 :heavy_check_mark: Botão de voltar ao topo;\
 :heavy_check_mark: Mudança nas cores da página;\
+:heavy_check_mark: Arrumando responsividade até 320px;\
+:heavy_check_mark: Colocando para Desktop;\
+:heavy_check_mark: ;\
+:heavy_check_mark: ;\
+:heavy_check_mark: ;\
 :heavy_check_mark: ;\
 :heavy_check_mark: Finalizado.
 
