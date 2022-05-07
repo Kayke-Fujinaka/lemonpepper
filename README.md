@@ -30,8 +30,6 @@ O site se chama "DoctorCare" e ele trata-se de uma Landing Page. Nela possui alg
 :heavy_check_mark: Colocando para Desktop;\
 :heavy_check_mark: ;\
 :heavy_check_mark: ;\
-:heavy_check_mark: ;\
-:heavy_check_mark: ;\
 :heavy_check_mark: Finalizado.
 
 ## :rocket: Tecnologias ##

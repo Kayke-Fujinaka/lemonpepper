@@ -11,9 +11,9 @@
 :root {
     font-size: 62.5%;
 
-    --hue: 190;
+    --hue: 0;
 
-    --primary-color: hsl(var(--hue), 100%, 26%);
+    --primary-color: hsl(var(--hue), 65%, 48%);
     --headline: hsl(210, 11%, 15%);
     --paragraph: hsl(210, 9%, 31%);
 
@@ -22,7 +22,7 @@
     --brand-light-2: hsl(calc(var(--hue) + 10), 14%, 97%);
     --brand-green: hsl(180, 63%, 98%);
 
-    --brand-dark: hsl(var(--hue), 100%, 14%);
+    --brand-dark: hsl(var(--hue), 72%, 30%);
 
     --nav-height: 7.2rem
 }
@@ -39,7 +39,7 @@ html, body {
 body {
     text-align: center;
     overflow: overlay;
-    background-color: var(--brand-green);
+    background-color: hsla(0, 0%, 98%, 1);
 }
 
 .wrapper {
@@ -164,16 +164,29 @@ nav .wrapper {
     justify-content: space-between;
 }
 
+nav .wrapper .logo {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: var(--headline);
+}
+
+nav .wrapper .logo span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
 nav.scroll {
     background: var(--primary-color);
 }
 
-nav.scroll .logo path {
-    fill: #fff;
+nav.scroll .logo {
+    color: #fff;
 }
 
-nav.scroll button path {
-    stroke: #fff;
+nav.scroll .logo span {
+    color: #fff;
 }
 
 nav button {
@@ -281,12 +294,12 @@ body.menu-expanded button {
     z-index: 100;
 }
 
-body.menu-expanded .logo path {
-    fill: #FFFFFF;
+body.menu-expanded .logo {
+    color: #FFFFFF;
 }
 
-body.menu-expanded button path {
-    stroke: #FFFFFF;
+body.menu-expanded .logo span {
+    color: #FFFFFF;
 }
 
 .social-links {
@@ -305,7 +318,7 @@ body.menu-expanded button path {
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(108rem + var(--nav-height));
+    height: calc(90rem + var(--nav-height));
     background-color: var(--brand-light);
     z-index: -1;
 }
@@ -339,8 +352,7 @@ body.menu-expanded button path {
     width: 100%;
     padding-block: 4rem;
     margin-inline: auto;
-    background-color: var(--brand-beige);
-    border: 0.1rem solid var(--brand-light);
+    background-color: #FFFFFF;
     border-radius: 0.6rem;
     display: flex;
     flex-direction: column;
@@ -374,9 +386,26 @@ body.menu-expanded button path {
     gap: 3rem;
 }
 
+#services .more {
+    margin-top: 2.5rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin-inline: auto;
+    width: 12.5rem;
+    height: 4.5rem;
+    cursor: pointer;
+}
+
+#services .more:hover {
+    background-color: var(--brand-dark);
+}
+
 #services .card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     gap: 1.6rem;
     padding: 2.4rem;
@@ -392,10 +421,22 @@ body.menu-expanded button path {
     color: var(--headline);
 }
 
+#services .cards .card button {
+    background-color: var(--primary-color);
+    border: none;
+    color: #FFFFFF;
+    height: 3rem;
+    cursor: pointer;
+}
+
+#services .cards .card button:hover {
+    background-color: var(--brand-dark);
+}
+
 /* --------> SECTION ABOUT <-------- */
 
 #about {
-    background-color: var(--brand-beige);
+    background-color: hsla(0, 100%, 98%, 1);
 }
 
 #about header {
@@ -443,21 +484,19 @@ footer {
 footer .logo {
     display: inline-block;
     margin-bottom: 2.4rem;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #FFFFFF;
 }
 
-footer .logo svg {
-    width: 23.6rem;
-    height: 3.1rem;
-}
-
-footer .logo path {
-    fill: #FFFFFF;
+footer .logo span {
+    font-weight: 700;
 }
 
 footer p {
     color: var(--brand-beige);
     line-height: 2;
-
+    font-size: 1.4rem;
     margin-bottom: 3.2rem;
 }
 
