@@ -60,7 +60,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 60%;
+        width: 65%;
     }
 
     nav#navigation .menu ul:nth-child(1) {
