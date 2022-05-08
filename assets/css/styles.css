@@ -486,6 +486,10 @@ body.menu-expanded .logo span {
     padding: 4rem 1rem;
 }
 
+.swiper-pagination span {
+    background-color: #c92a2a;
+}
+
 /* --------> SECTION ABOUT <-------- */
 
 #about {
