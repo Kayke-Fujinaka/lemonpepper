@@ -391,10 +391,10 @@ body.menu-expanded .logo span {
     background-color: var(--primary-color);
     border: none;
     color: #FFFFFF;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-inline: auto;
-    width: 12.5rem;
-    height: 4.5rem;
+    width: 10rem;
+    height: 4rem;
     cursor: pointer;
 }
 
