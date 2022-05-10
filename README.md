@@ -14,7 +14,7 @@ A LemonPepper é uma pizzaria fictícia que simula ter mais de 58 lojas espalhad
 
 ## :dart: Etapas ##
 
-:heavy_check_mark: Mobile First ;\
+:heavy_check_mark: Começando com Mobile First ;\
 :heavy_check_mark: Estruturação e Estilização do Container Home;\
 :heavy_check_mark: Finalizando o Container Home;\
 :heavy_check_mark: Menu de Navegação do Mobile junto com JavaScript;\
