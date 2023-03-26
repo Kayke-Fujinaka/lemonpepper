@@ -1,57 +1,57 @@
-# LemonPepper
+<h1 align="center">🍕 LemonPepper</h1>
 
-<img src="./assets/img/Animação.gif" alt="Um gif apresentando o projeto">
+<img src="./assets/img/Animação.gif" alt="A gif introducing the project">
 
->  Um site de uma pizzaria chamada LemonPepper!!!
+> A website for a pizzeria called LemonPepper!!!
 
-## :page_facing_up: Explicação
+## :page_facing_up: Explanation
 
-A aplicação foi criada em colaboração com o evento NLW Origin da Rocketseat, a qual as aulas foram orientadas pelo Mayk Brito.
+The application was created in collaboration with Rocketseat's NLW Origin event, which classes were guided by Mayk Brito.
 
-O site se chama "LemonPepper" e ele trata-se de uma Landing Page. Nela possui algumas seções como o Início, Cardápio, Depoimentos, Sobre nós e Contato. Foi iniciado com Mobile First e depois foi transformado para Desktop.
+The site is called "LemonPepper" and it is a Landing Page. It has some sections such as Home, Menu, Testimonials, About Us and Contact. It was started with Mobile First and later transformed to Desktop.
 
-A LemonPepper é uma pizzaria fictícia que simula ter mais de 58 lojas espalhadas por todo Brasil. 
+LemonPepper is a fictional pizzeria that simulates having more than 58 stores spread throughout Brazil.
 
-## :dart: Etapas ##
+## :dart: Steps ##
 
-:heavy_check_mark: Começando com Mobile First ;\
-:heavy_check_mark: Estruturação e Estilização do Container Home;\
-:heavy_check_mark: Finalizando o Container Home;\
-:heavy_check_mark: Menu de Navegação do Mobile junto com JavaScript;\
-:heavy_check_mark: Estruturação e Estilização da Seção Services e About;\
-:heavy_check_mark: Aplicando uma rolagem mais suave com smooth scrolling;\
-:heavy_check_mark: Seletor de ID do #home, #services e #about;\
-:heavy_check_mark: Estruturação e Estilização da Seção Contact;\
-:heavy_check_mark: Estruturação e Estilização do Footer;\
-:heavy_check_mark: Colocando o Link do meu Whatsapp nos "Agende sua Consulta";\
-:heavy_check_mark: Seletor de ID do #contact e #about;\
-:heavy_check_mark: Padronizar botões;\
-:heavy_check_mark: Botão de voltar ao topo;\
-:heavy_check_mark: Mudança nas cores da página;\
-:heavy_check_mark: Arrumando responsividade até 320px;\
-:heavy_check_mark: Colocando para Desktop;\
-:heavy_check_mark: Alterando a cor do site para vermelho;\
-:heavy_check_mark: Arrumando alguns detalhes como emoji, parágrafos, títulos e etc;\
-:heavy_check_mark: Seção de depoimentos;\
-:heavy_check_mark: Finalizado.
+:heavy_check_mark: Starting with Mobile First ;\
+:heavy_check_mark: Container Home Structuring and Styling;\
+:heavy_check_mark: Finishing Container Home;\
+:heavy_check_mark: Mobile Navigation Menu along with JavaScript;\
+:heavy_check_mark: Services and About Section Structuring and Styling;\
+:heavy_check_mark: Applying smoother scrolling with smooth scrolling;\
+:heavy_check_mark: #home, #services and #about ID selector;\
+:heavy_check_mark: Contact Section Structuring and Styling;\
+:heavy_check_mark: Footer Structuring and Styling;\
+:heavy_check_mark: Putting my Whatsapp Link in the "Schedule your Appointment";\
+:heavy_check_mark: #contact and #about ID selector;\
+:heavy_check_mark: Standardize buttons;\
+:heavy_check_mark: Back to top button;\
+:heavy_check_mark: Change the page colors;\
+:heavy_check_mark: Fixing responsiveness up to 320px;\
+:heavy_check_mark: Setting to Desktop;\
+:heavy_check_mark: Changing the site color to red;\
+:heavy_check_mark: Fixing some details like emoji, paragraphs, titles and etc;\
+:heavy_check_mark: Testimonials section;\
+:heavy_check_mark: Done.
 
-## :rocket: Tecnologias ##
+## :rocket: Technologies
 
-No projeto foram utilizadas as seguintes tecnologias:
+The following tools were used in this project:
 
 - [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)  
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)  
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) 
 
-## 🤝 Colaboradores
+## 🤝 Contributors
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+We want to thank the following people who contributed to this project:
 
 <table>
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="160px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="100px;" alt="Kayke Fujinaka's photo on GitHub"/><br>
         <sub>
           <b>Kayke Fujinaka</b>
         </sub>
@@ -60,10 +60,10 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob licença. Consulte o arquivo [LICENSE](LICENSE.md) para obter mais detalhes.
+This project is under license. See the [LICENSE](LICENSE.md) file for more details.
 
 &#xa0;
 
-<a href="#top">Volte para o topo</a>
+<a href="#top">Back to top</a>
